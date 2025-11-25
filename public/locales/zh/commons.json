@@ -29,7 +29,6 @@
     "drop-cancel": "拖到这里取消"
   },
   "scan-page": {
-    "donate-btn": "现在赞助",
     "discussions-btn": "讨论区",
     "title": "扫描你的作业",
     "tip": "我们不会在未经授权时上传您的文件",
@@ -383,7 +382,6 @@
       },
       "ui": {
         "title": "界面",
-        "show-donate-btn": "显示捐赠按钮",
         "show-qwen-hint": "显示 Qwen Max 服务提示"
       }
     }

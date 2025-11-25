@@ -29,7 +29,6 @@
     "drop-cancel": "Drag here to cancel"
   },
   "scan-page": {
-    "donate-btn": "Donate now",
     "discussions-btn": "Discussions",
     "title": "Scan your homework",
     "tip": "We never upload without your action.",
@@ -383,7 +382,6 @@
       },
       "ui": {
         "title": "UI",
-        "show-donate-btn": "Show donate button",
         "show-qwen-hint": "Show Qwen Max service tip"
       }
     }

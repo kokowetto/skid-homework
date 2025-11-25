@@ -69,7 +69,6 @@ export default function ScanPage() {
   // State to track if the AI is currently processing images.
   const setWorking = useProblemsStore((s) => s.setWorking);
 
-  const showDonateBtn = useSettingsStore((s) => s.showDonateBtn);
   const isMobile = useMediaQuery("(max-width: 640px)");
   const [activeTab, setActiveTab] = useState<"capture" | "preview">(
     items.length ? "preview" : "capture",
@@ -461,27 +460,6 @@ ${traits}
                 {t("discussions-btn")}
               </a>
             </Button>
-
-            {/* {showDonateBtn && ( */}
-            {/*   <Button */}
-            {/*     className={cn( */}
-            {/*       "gap-2 whitespace-nowrap", */}
-            {/*       isMobile ? "w-full justify-center rounded-full py-3" : "px-4", */}
-            {/*     )} */}
-            {/*     size={isMobile ? "lg" : "default"} */}
-            {/*     variant="secondary" */}
-            {/*     asChild */}
-            {/*   > */}
-            {/*     <a */}
-            {/*       href="https://996every.day/donate" */}
-            {/*       target="_blank" */}
-            {/*       rel="noreferrer" */}
-            {/*     > */}
-            {/*       <StarIcon className="h-4 w-4" /> */}
-            {/*       {t("donate-btn")} */}
-            {/*     </a> */}
-            {/*   </Button> */}
-            {/* )} */}
           </header>
 
           {isMobile && (

@@ -35,9 +35,6 @@ export interface SettingsState {
   imageBinarizing: boolean;
   setImageBinarizing: (imagePostprocessing: boolean) => void;
 
-  showDonateBtn: boolean;
-  setShowDonateBtn: (showDonateBtn: boolean) => void;
-
   showQwenHint: boolean;
   setShowQwenHint: (show: boolean) => void;
 
@@ -61,7 +58,6 @@ export const useSettingsStore = create<SettingsState>()(
   persist(
     (set) => ({
       imageBinarizing: false,
-      showDonateBtn: true,
       showQwenHint: SHOULD_SHOW_QWEN_HINT_DEFAULT,
       theme: "system",
       language: DEFAULT_LANGUAGE,
@@ -70,7 +66,6 @@ export const useSettingsStore = create<SettingsState>()(
       traits: "",
 
       setImageBinarizing: (state) => set({ imageBinarizing: state }),
-      setShowDonateBtn: (state) => set({ showDonateBtn: state }),
       setShowQwenHint: (state) => set({ showQwenHint: state }),
       setThemePreference: (theme) => set({ theme }),
       setLanguage: (language) =>
@@ -106,7 +101,6 @@ export const useSettingsStore = create<SettingsState>()(
       storage: createJSONStorage(() => localStorage),
       partialize: (state) => ({
         imageBinarizing: state.imageBinarizing,
-        showDonateBtn: state.showDonateBtn,
         showQwenHint: state.showQwenHint,
         theme: state.theme,
         language: state.language,
@@ -145,4 +139,3 @@ export const useSettingsStore = create<SettingsState>()(
 );
 
 export const getDefaultShortcuts = () => ({ ...DEFAULT_SHORTCUTS });
-

@@ -73,8 +73,6 @@ export default function SettingsPage() {
   const {
     imageBinarizing,
     setImageBinarizing,
-    showDonateBtn,
-    setShowDonateBtn,
     showQwenHint,
     setShowQwenHint,
     theme: themePreference,
@@ -478,11 +476,7 @@ export default function SettingsPage() {
                   </Badge>
                 </div>
                 <Button asChild className="w-full md:w-auto">
-                  <a
-                    href={QWEN_TOKEN_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href={QWEN_TOKEN_URL} target="_blank" rel="noreferrer">
                     {tCommon("qwen-callout.button")}
                   </a>
                 </Button>
@@ -796,17 +790,6 @@ export default function SettingsPage() {
             />
             <Label htmlFor="image-binarizing">
               {t("advanced.image-post-processing.binarizing")}
-            </Label>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <Checkbox
-              id="show-donate-btn"
-              checked={showDonateBtn}
-              onCheckedChange={(state) => setShowDonateBtn(state as boolean)}
-            />
-            <Label htmlFor="show-donate-btn">
-              {t("advanced.ui.show-donate-btn")}
             </Label>
           </div>
 

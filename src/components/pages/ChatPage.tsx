@@ -67,6 +67,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { MemoizedMarkdown } from "../MarkdownRenderer";
+import Link from "next/link";
 
 // --- Utilities ---
 function trimTitle(text: string, fallback: string) {
@@ -694,13 +695,15 @@ export default function ChatPage() {
             <div className="ml-auto flex items-center gap-1">
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="h-8 w-8 text-muted-foreground"
-                  >
-                    <Settings2 className="h-4 w-4" />
-                  </Button>
+                  <Link href="/settings">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-8 w-8 text-muted-foreground"
+                    >
+                      <Settings2 className="h-4 w-4" />
+                    </Button>
+                  </Link>
                 </TooltipTrigger>
                 <TooltipContent>
                   {t("settings.title", { defaultValue: "Settings" })}

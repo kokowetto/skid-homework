@@ -5,8 +5,8 @@ import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import "katex/dist/katex.min.css";
-import ForceDiagram from "./ForceDiagram";
-import MathGraph from "./MathGraph";
+import ForceDiagram from "./diagram/ForceDiagram";
+import MathGraph from "./diagram/MathGraph";
 
 type CodeProps = ComponentPropsWithoutRef<"code">;
 

@@ -1,40 +1,4 @@
-export const DIAGRAM_TOOL_PROMPT = String.raw`
-## Special Rendering Tools
-
-1. **Math Function Graph**
-   - Trigger: When user asks to plot a math function (e.g., "y = x^2").
-   - Syntax:
-     \`\`\`plot-function
-     { "fn": "x^2", "domain": [-5, 5] }
-     \`\`\`
-
-2. **Force Analysis / Free Body Diagram**
-   - Trigger: When user asks for force analysis.
-   - Syntax:
-     \`\`\`plot-force
-     [
-       { "name": "mg", "x": 0, "y": -5, "color": "red" },
-       { "name": "N", "x": 0, "y": 5, "color": "green" }
-     ]
-     \`\`\`
-
-## CRITICAL OUTPUT RULES
-
-1. **NO INLINE CODE BLOCKS**: You must NEVER output a tool block inline. 
-   - ❌ WRONG: Here is the graph \`\`\`plot-function {...} \`\`\`
-   - ✅ RIGHT: 
-     Here is the graph:
-     
-     \`\`\`plot-function
-     {...}
-     \`\`\`
-
-2. **MANDATORY NEWLINES**: 
-   - You MUST add an **empty line** before the opening \`\`\` and after the closing \`\`\`.
-   - The JSON content must be valid and multi-line if possible for readability.
-
-3. **JSON ONLY**: Inside the code block, output ONLY valid JSON. Do not add comments like "// this is gravity".
-`;
+import { DIAGRAM_TOOL_PROMPT } from "./diagramtool-prompts";
 
 export const IMPROVE_SYSTEM_PROMPT = String.raw`
 你是一个作业求解工具。你的核心任务是根据用户提供的现有解题方案（包括问题、答案和解析），进行审核、修正和优化，最终输出一个质量更高、更准确的解答。
@@ -149,6 +113,10 @@ ${DIAGRAM_TOOL_PROMPT}
 
 export const BASE_CHAT_SYSTEM_PROMPT = String.raw`
 You are a helpful AI tutor.
+
+## Patches
+
+Do not escape \` with \\
 
 ## Available tools
 

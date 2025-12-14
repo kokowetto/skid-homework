@@ -65,7 +65,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { MemoizedMarkdown } from "../MarkdownRenderer";
+import { MemoizedMarkdown } from "../markdown/MarkdownRenderer";
 import Link from "next/link";
 import { Kbd } from "../ui/kbd";
 
@@ -487,7 +487,7 @@ export default function ChatPage() {
                           : "text-muted-foreground",
                       )}
                     >
-                      <span className="truncate w-[180px] text-left">
+                      <span className="truncate w-45 text-left">
                         {thread.title}
                       </span>
                       <span className="text-[10px] opacity-70 truncate max-w-full">
@@ -593,7 +593,7 @@ export default function ChatPage() {
                     <Menu className="h-5 w-5" />
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="left" className="w-[300px] p-0">
+                <SheetContent side="left" className="w-75 p-0">
                   <SheetHeader className="px-4 py-3 border-b text-left">
                     <SheetTitle>Chat Menu</SheetTitle>
                   </SheetHeader>
@@ -645,7 +645,7 @@ export default function ChatPage() {
                   <ChevronsUpDown className="h-3 w-3 opacity-50" />
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="w-[300px] p-0" align="start">
+              <PopoverContent className="w-75 p-0" align="start">
                 <Command>
                   <CommandInput placeholder={t("source.search")} />
                   <CommandList>
@@ -798,7 +798,7 @@ export default function ChatPage() {
                   }}
                   placeholder={t("composer.placeholder")}
                   disabled={isSending || !resolvedSource}
-                  className="min-h-6 max-h-[200px] w-full resize-none border-0 bg-transparent shadow-none focus-visible:ring-0 text-base"
+                  className="min-h-6 max-h-50 w-full resize-none border-0 bg-transparent shadow-none focus-visible:ring-0 text-base"
                 />
                 <Button
                   size="icon"

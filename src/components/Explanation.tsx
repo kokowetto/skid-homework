@@ -1,6 +1,6 @@
 import { ExplanationMode } from "@/store/settings-store";
 import { useTranslation } from "react-i18next";
-import { MemoizedMarkdown } from "./MarkdownRenderer";
+import { MemoizedMarkdown } from "./markdown/MarkdownRenderer";
 import { ExplanationStep } from "@/store/problems-store";
 import { useMemo, useState } from "react";
 import { Button } from "./ui/button";

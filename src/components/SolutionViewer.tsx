@@ -13,7 +13,7 @@ import { useProblemsStore } from "@/store/problems-store";
 import { toast } from "sonner";
 import { type ImproveResponse } from "@/ai/response";
 import { Kbd } from "./ui/kbd";
-import { MemoizedMarkdown } from "./MarkdownRenderer";
+import { MemoizedMarkdown } from "./markdown/MarkdownRenderer";
 import {
   ImproveSolutionDialog,
   type ImproveSolutionDialogHandle,

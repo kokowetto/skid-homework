@@ -1,4 +1,7 @@
 {
+  "md": {
+    "generating-diagram": "Generating diagram..."
+  },
   "actions": {
     "clear-all": "Clear All",
     "clear-confirmation": "Click again to clear",

@@ -12,6 +12,7 @@ import "katex/dist/katex.min.css";
 import ForceDiagram from "./diagram/ForceDiagram";
 import MathGraph from "./diagram/MathGraph";
 import { TextShimmer } from "../ui/text-shimmer";
+import { useTranslation } from "react-i18next";
 
 type UnistPoint = {
   line: number;
@@ -44,6 +45,7 @@ const CodeBlock = ({
   node,
   ...props
 }: MarkdownCodeProps) => {
+  const { t } = useTranslation("commons", { keyPrefix: "md" });
   const source = useContext(SourceContext);
 
   const match = /language-([\w-]+)/.exec(className || "");
@@ -67,7 +69,7 @@ const CodeBlock = ({
     if (!isBlockComplete) {
       return (
         <TextShimmer className="font-mono text-sm" duration={1}>
-          Generating diagram...
+          {t("generating-diagram")}
         </TextShimmer>
       );
     }

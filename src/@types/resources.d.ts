@@ -173,6 +173,10 @@ interface Resources {
       "title": "Inspect Details"
     },
     "md": {
+      "diagram": {
+        "view-code": "View Code",
+        "view-diagram": "View Diagram"
+      },
       "generating-diagram": "Generating diagram..."
     },
     "preview": {

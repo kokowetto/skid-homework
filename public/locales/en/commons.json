@@ -1,6 +1,10 @@
 {
   "md": {
-    "generating-diagram": "Generating diagram..."
+    "generating-diagram": "Generating diagram...",
+    "diagram": {
+      "view-diagram": "View Diagram",
+      "view-code": "View Code"
+    }
   },
   "actions": {
     "clear-all": "Clear All",

@@ -2,6 +2,7 @@
 import React, {
   ComponentPropsWithoutRef,
   createContext,
+  ReactNode,
   useContext,
 } from "react";
 import Markdown from "react-markdown";
@@ -14,6 +15,7 @@ import MathGraph from "./diagram/MathGraph";
 import { TextShimmer } from "../ui/text-shimmer";
 import { useTranslation } from "react-i18next";
 import MermaidDiagram from "./diagram/MermaidDiagram";
+import DiagramRenderer from "./diagram/DiagramRenderer";
 
 type UnistPoint = {
   line: number;
@@ -75,8 +77,10 @@ const CodeBlock = ({
       );
     }
 
+    let component: ReactNode;
+
     if (lang === "plot-function") {
-      return (
+      component = (
         <div className="h-100 w-100">
           <MathGraph code={content} />
         </div>
@@ -84,12 +88,14 @@ const CodeBlock = ({
     }
 
     if (lang === "plot-force") {
-      return <ForceDiagram code={content} />;
+      component = <ForceDiagram code={content} />;
     }
 
     if (lang === "plot-mermaid") {
-      return <MermaidDiagram code={content} />;
+      component = <MermaidDiagram code={content} />;
     }
+
+    return <DiagramRenderer content={content}>{component}</DiagramRenderer>;
   }
 
   return (

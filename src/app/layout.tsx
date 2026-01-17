@@ -2,6 +2,8 @@ import "../index.css";
 import type { Metadata } from "next";
 import Providers from "./providers";
 
+import "@/css/jsxgraph.css";
+
 export const metadata: Metadata = {
   title: "Skid Homework",
   description:

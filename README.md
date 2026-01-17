@@ -74,10 +74,10 @@ Skid-Homework 不会要求你下载桌面软件, 一切东西都在浏览器内�
 
 ### 画图工具支持情况
 
-- JSXGraph
-- Mermaid
-- plot-function (弃用, 但仍然可以生成)
-- SVG
+- [JSXGraph](https://github.com/jsxgraph/jsxgraph)
+- [Mermaid](https://mermaid.js.org/)
+- [function-plot](https://github.com/mauriciopoppe/function-plot) (弃用, 但仍然可以生成)
+- [SVG](https://www.w3.org/Graphics/SVG/)
 
 ### 为什么如此之慢
 
